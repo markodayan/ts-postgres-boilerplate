@@ -11,7 +11,7 @@ tsc --init
 Install debug and production start tools for TypeScript code
 
 ```bash
-npm i ts-node ts-node-dev tsconfig typescript express typeorm pg
+npm i ts-node ts-node-dev tsconfig typescript express typeorm pg reflect-metadata
 ```
 
 Install some types:
@@ -70,8 +70,4 @@ Add the following to your scripts in `package.json`:
     "debug": "ts-node -r tsconfig-paths/register"
 ```
 
-Install TypeORM (to use together with PostgreSQL):
-
-```bash
-
-```
+Create an entities directory inside of the `src` folder.
