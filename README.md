@@ -11,13 +11,13 @@ tsc --init
 Install debug and production start tools for TypeScript code
 
 ```bash
-npm i ts-node ts-node-dev tsconfig
+npm i ts-node ts-node-dev tsconfig typescript express typeorm pg
 ```
 
-Install node types:
+Install some types:
 
 ```bash
-npm i -D @types/node
+npm i -D @types/node @types/express
 ```
 
 Add this to the `tsconfig.json` file:
