@@ -3,7 +3,7 @@
     "files": true
   },
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "strict": true,
     "rootDir": "src",
@@ -16,6 +16,8 @@
     "strictFunctionTypes": true,
     "strictPropertyInitialization": false,
     "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "baseUrl": "./",
     "paths": {
       "@src/*": ["src/*"],

@@ -11,7 +11,7 @@ tsc --init
 Install debug and production start tools for TypeScript code
 
 ```bash
-npm i ts-node ts-node-dev tsconfig typescript express typeorm pg reflect-metadata
+npm i ts-node ts-node-dev tsconfig typescript express typeorm pg reflect-metadata express
 ```
 
 Install some types:
@@ -20,7 +20,7 @@ Install some types:
 npm i -D @types/node @types/express
 ```
 
-Add this to the `tsconfig.json` file:
+Add this to the `tsconfig.json` file (make sure to also set `"experimentalDecorators"` to `true` and `"emitDecoratorMetadata"` to true, you will also need to set the `"target"` to `"es6"` else the decorator functionality will not work):
 
 ```json
 {
@@ -28,7 +28,7 @@ Add this to the `tsconfig.json` file:
     "files": true
   },
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "strict": true,
     "rootDir": "src",
@@ -41,6 +41,8 @@ Add this to the `tsconfig.json` file:
     "strictFunctionTypes": true,
     "strictPropertyInitialization": false,
     "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "baseUrl": "./",
     "paths": {
       "@src/*": ["src/*"],
